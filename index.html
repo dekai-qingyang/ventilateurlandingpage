@@ -4,6 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LEVOIT Ventilateur sur Pied - Offre Spéciale</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1064543255284514');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1064543255284514&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; color:#333; }
     .banner { background:black; color:white; padding:10px; text-align:center; font-size:18px; }
@@ -26,12 +45,31 @@
     .carousel .next { right: 10px; }
     .price { font-size: 28px; color: red; margin: 10px 0; }
     .stock { color: red; font-weight: bold; font-size: 16px; }
+    .countdown { font-size: 18px; color: #d9534f; font-weight: bold; margin-top: 5px; }
     .btn-buy { display: inline-block; background: red; color: white; padding: 15px 25px; font-size: 18px; text-decoration: none; border-radius: 8px; margin-top: 15px; }
+    .btn-buy:hover { background: darkred; }
     .features, .reviews { max-width: 800px; margin: 20px auto; padding: 10px; line-height: 1.6; }
     .reviews img { width: 50px; height: 50px; border-radius: 50%; vertical-align: middle; margin-right: 10px; }
     .review-item { border-bottom: 1px solid #ddd; padding: 10px 0; }
     .stars { color: gold; font-size: 18px; margin-left: 5px; }
     .payment-security { max-width: 300px; margin: 20px auto; display:block; }
+    /* 社会证明提示 */
+    .social-proof {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(0,0,0,0.8);
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        display: none;
+        animation: fadein 0.5s;
+    }
+    @keyframes fadein {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
 </style>
 </head>
 <body>
@@ -55,8 +93,9 @@
 <div class="features">
     <h2>LEVOIT Ventilateur sur Pied 20 dB Silencieux</h2>
     <p class="price">💶 9,9 €</p>
-    <p class="stock">⚠️ Stock limité : seulement 91 pièces disponibles !</p>
-    <a href="https://dfstrck.com/?a=169546&c=378085" class="btn-buy">🛒 Acheter Maintenant</a>
+    <p class="stock" id="stock">⚠️ Stock limité : seulement 91 pièces disponibles !</p>
+    <p class="countdown" id="countdown">⏳ Offre se termine dans : 15:00</p>
+    <a href="https://dfstrck.com/?a=169546&c=378085&co=219482&mt=16&s2=#fbclid#&s3=1064543255284514" class="btn-buy">🛒 Acheter Maintenant</a>
     <img src="https://coffee-store.space/lander/fr---dolce-gusto-capsules-prefill_1754481345/assets/payments.png" class="payment-security" alt="Paiement sécurisé">
 
     <h3>À propos de cet article</h3>
@@ -96,7 +135,11 @@
     </div>
 </div>
 
+<!-- 社会证明浮动提示 -->
+<div class="social-proof" id="social-proof">💬 Marie (Paris) vient d'acheter ce produit !</div>
+
 <script>
+    // 图片轮播
     let index = 0;
     const images = document.querySelectorAll('.carousel img');
     const prevBtn = document.querySelector('.prev');
@@ -108,29 +151,41 @@
         index = (i + images.length) % images.length;
         images[index].classList.add('active');
     }
+    function showNextImage() { showImage(index + 1); }
+    function showPrevImage() { showImage(index - 1); }
+    nextBtn.addEventListener('click', () => { showNextImage(); resetAutoSlide(); });
+    prevBtn.addEventListener('click', () => { showPrevImage(); resetAutoSlide(); });
+    function resetAutoSlide() { clearInterval(autoSlide); autoSlide = setInterval(showNextImage, 3000); }
 
-    function showNextImage() {
-        showImage(index + 1);
-    }
+    // 倒计时功能
+    let countdownTime = 15 * 60; // 15分钟
+    const countdownEl = document.getElementById('countdown');
+    setInterval(() => {
+        let minutes = Math.floor(countdownTime / 60);
+        let seconds = countdownTime % 60;
+        countdownEl.textContent = `⏳ Offre se termine dans : ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        if (countdownTime > 0) countdownTime--;
+    }, 1000);
 
-    function showPrevImage() {
-        showImage(index - 1);
-    }
+    // 库存减少模拟
+    let stock = 91;
+    const stockEl = document.getElementById('stock');
+    setInterval(() => {
+        if (stock > 5 && Math.random() > 0.7) {
+            stock--;
+            stockEl.textContent = `⚠️ Stock limité : seulement ${stock} pièces disponibles !`;
+        }
+    }, 5000);
 
-    nextBtn.addEventListener('click', () => {
-        showNextImage();
-        resetAutoSlide();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        showPrevImage();
-        resetAutoSlide();
-    });
-
-    function resetAutoSlide() {
-        clearInterval(autoSlide);
-        autoSlide = setInterval(showNextImage, 3000);
-    }
+    // 社会证明提示
+    const socialProof = document.getElementById('social-proof');
+    const buyers = ["Marie (Paris)", "Julien (Lyon)", "Sophie (Marseille)", "Paul (Toulouse)", "Isabelle (Nice)"];
+    setInterval(() => {
+        let buyer = buyers[Math.floor(Math.random() * buyers.length)];
+        socialProof.textContent = `💬 ${buyer} vient d'acheter ce produit !`;
+        socialProof.style.display = 'block';
+        setTimeout(() => { socialProof.style.display = 'none'; }, 5000);
+    }, 15000);
 </script>
 
 </body>
