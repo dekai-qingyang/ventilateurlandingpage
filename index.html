@@ -1,192 +1,185 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ventilateur sur Pied - Offre Spéciale</title>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1064543255284514');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1064543255284514&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Become a Direct Seller – Earn €100/Day Easily</title>
 <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; color:#333; }
-    .banner { background:black; color:white; padding:10px; text-align:center; font-size:18px; }
-    .carousel { position: relative; max-width: 600px; margin: 20px auto; overflow: hidden; }
-    .carousel img { width: 100%; display: none; }
-    .carousel img.active { display: block; }
-    .carousel button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0,0,0,0.5);
-        color: white;
-        border: none;
-        font-size: 24px;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 50%;
-    }
-    .carousel .prev { left: 10px; }
-    .carousel .next { right: 10px; }
-    .price { font-size: 28px; color: red; margin: 10px 0; }
-    .stock { color: red; font-weight: bold; font-size: 16px; }
-    .countdown { font-size: 18px; color: #d9534f; font-weight: bold; margin-top: 5px; }
-    .btn-buy { display: inline-block; background: red; color: white; padding: 15px 25px; font-size: 18px; text-decoration: none; border-radius: 8px; margin-top: 15px; }
-    .btn-buy:hover { background: darkred; }
-    .features, .reviews { max-width: 800px; margin: 20px auto; padding: 10px; line-height: 1.6; }
-    .reviews img { width: 50px; height: 50px; border-radius: 50%; vertical-align: middle; margin-right: 10px; }
-    .review-item { border-bottom: 1px solid #ddd; padding: 10px 0; }
-    .stars { color: gold; font-size: 18px; margin-left: 5px; }
-    .payment-security { max-width: 300px; margin: 20px auto; display:block; }
-    /* 社会证明提示 */
-    .social-proof {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        background: rgba(0,0,0,0.8);
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        font-size: 14px;
-        display: none;
-        animation: fadein 0.5s;
-    }
-    @keyframes fadein {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
+  :root{
+    --brand:#111; --accent:#27ae60; --lite:#f6f7f9; --text:#222; --muted:#666;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff;}
+  .banner{background:var(--brand);color:#fff;padding:12px 16px;text-align:center;font-weight:700}
+  .hero{
+    background:url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    color:#fff;text-align:center;padding:80px 18px;position:relative;isolation:isolate;
+  }
+  .hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:0}
+  .hero > div{position:relative;z-index:1;max-width:980px;margin:0 auto}
+  .hero h1{margin:0 0 10px;font-size:34px;line-height:1.15}
+  .hero p{margin:0 auto 18px;max-width:780px;font-size:18px;opacity:.95}
+  .cta-primary{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    padding:14px 24px;border-radius:10px;font-weight:700;box-shadow:0 6px 18px rgba(39,174,96,.25)}
+  .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+  .badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:8px 12px;border-radius:999px;font-size:13px;color:#fff}
+  .section{max-width:1100px;margin:0 auto;padding:28px 16px}
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;align-items:start}
+  .card{grid-column:span 12;background:var(--lite);border:1px solid #eaecef;border-radius:14px;padding:18px;text-align:center}
+  .card img{width:50px;height:50px;margin-bottom:10px;object-fit:cover;border-radius:8px}
+  .icon{width:50px;height:50px;margin-bottom:10px;color:var(--accent)}
+  @media(min-width:800px){.card.quad{grid-column:span 3}.two{grid-column:span 6}}
+  .muted{color:var(--muted)}
+  .list{margin:.4rem 0 0;padding-left:18px;text-align:left}
+  .list li{margin:.2rem 0}
+  .case{display:flex;gap:14px;padding:14px;border:1px solid #eef0f3;border-radius:12px;background:#fff}
+  .avatar{width:56px;height:56px;border-radius:50%;background:#ddd;flex:0 0 56px}
+  .kpi{display:inline-block;background:#eefaf3;color:#1e824c;border:1px solid #d6f2e2;padding:4px 8px;border-radius:8px;font-weight:700;font-size:13px;margin:.3rem 0}
+  .step{display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;text-align:left}
+  .step img{width:34px;height:34px}
+  .cta-box{background:var(--brand);color:#fff;border-radius:16px;padding:22px;text-align:center}
+  .cta-secondary{display:inline-block;background:#fff;color:#000;font-weight:800;text-decoration:none;padding:12px 20px;border-radius:10px}
+  footer{padding:22px 16px;color:#777;text-align:center;font-size:13px}
+
+  /* WhatsApp Floating Button */
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+  }
+  .whatsapp-float:hover { transform: scale(1.1); }
+  .whatsapp-float img { width: 38px; height: 38px; }
 </style>
 </head>
 <body>
 
-<div class="banner">🎁 Offre spéciale + livraison gratuite en 2 à 4 jours</div>
+<div class="banner">Become a Direct Seller – Earning €100 per day is easy</div>
 
-<div class="carousel">
-    <img src="https://m.media-amazon.com/images/I/71GU14TuAyL._AC_SL1500_.jpg" class="active">
-    <img src="https://m.media-amazon.com/images/I/71G97zceUKL._AC_SL1500_.jpg">
-    <img src="https://m.media-amazon.com/images/I/81o7nLf5XzL._AC_SL1500_.jpg">
-    <img src="https://m.media-amazon.com/images/I/91gHM8v-gGL._AC_SL1500_.jpg">
-    <img src="https://m.media-amazon.com/images/I/81NE8YVq58L._AC_SL1500_.jpg">
-    <img src="https://m.media-amazon.com/images/I/81pfCZo9xAL._AC_SL1500_.jpg">
-    <img src="https://m.media-amazon.com/images/I/81jscs5+akL._AC_SL1500_.jpg">
-    <img src="https://m.media-amazon.com/images/I/81p+Wd2bnTL._AC_SL1500_.jpg">
-    <img src="https://m.media-amazon.com/images/I/71F5z1Gey0L._AC_SL1500_.jpg">
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-</div>
-
-<div class="features">
-    <h2>LEVOIT Ventilateur sur Pied 20 dB Silencieux</h2>
-    <p class="price">💶 9,9 €</p>
-    <p class="stock" id="stock">⚠️ Stock limité : seulement 91 pièces disponibles !</p>
-    <p class="countdown" id="countdown">⏳ Offre se termine dans : 15:00</p>
-    <a href="https://dfstrck.com/?a=169546&c=378085&co=219482&mt=16" class="btn-buy">🛒 Acheter Maintenant</a>
-    <img src="https://coffee-store.space/lander/fr---dolce-gusto-capsules-prefill_1754481345/assets/payments.png" class="payment-security" alt="Paiement sécurisé">
-
-    <h3>À propos de cet article</h3>
-    <p>🌙 Expérience de Sommeil Ultra-silencieuse (20 dB en Mode Veille). Écran LED éteignable pour un sommeil sans lumière.</p>
-    <p>💨 Puissant Flux d'Air : 7.5 m/s, 2465 m³/h, distance 30 m.</p>
-    <p>🔄 Oscillation 90° + 120° pour une circulation optimale de l'air.</p>
-    <p>🕹 Télécommande magnétique, minuterie 12h, 4 modes, 12 vitesses.</p>
-    <p>🧼 Facile à nettoyer et à entretenir, hauteur réglable.</p>
-</div>
-
-<div class="reviews">
-    <h3>⭐ Avis des Clients</h3>
-    <div class="review-item">
-        <img src="https://coffee-store.space/lander/fr---dolce-gusto-capsules-prefill_1754481345/assets/img-review1.jpg"> 
-        <strong>Claire M.</strong> <span class="stars">★★★★★</span>
-        <p>Ventilateur super silencieux, parfait pour dormir. Livraison rapide !</p>
+<section class="hero">
+  <div>
+    <h1>Start a profitable online shop in your spare time</h1>
+    <p>Open for free. We supply products, handle logistics and run ads. You focus on selling and get paid.</p>
+    <a class="cta-primary" href="#apply">Contact Support to Open Your Shop</a>
+    <div class="badges">
+      <span class="badge">Free to start</span><span class="badge">We provide inventory</span>
+      <span class="badge">We ship for you</span><span class="badge">We manage ads</span>
     </div>
-    <div class="review-item">
-        <img src="https://coffee-store.space/lander/fr---dolce-gusto-capsules-prefill_1754481345/assets/img-review2.jpeg"> 
-        <strong>Julien R.</strong> <span class="stars">★★★★★</span>
-        <p>Très puissant et facile à utiliser. Excellent rapport qualité/prix.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="grid">
+    <div class="card quad">
+      <img loading="lazy" src="https://img.icons8.com/color/96/000000/shop.png" alt="Free store setup" />
+      <h3>Free Store Setup</h3>
+      <p class="muted">Open your store with zero cost. Keep profits from day one.</p>
     </div>
-    <div class="review-item">
-        <img src="https://coffee-store.space/lander/fr---dolce-gusto-capsules-prefill_1754481345/assets/img-review3.jpeg"> 
-        <strong>Sophie L.</strong> <span class="stars">★★★★☆</span>
-        <p>Design élégant et efficace. Un peu grand mais parfait pour mon salon.</p>
+    <div class="card quad">
+      <img loading="lazy" src="https://img.icons8.com/color/96/000000/product.png" alt="Products provided" />
+      <h3>Products Provided</h3>
+      <p class="muted">Access trending, quality-checked products ready for Italy.</p>
     </div>
-    <div class="review-item">
-        <img src="https://coffee-store.space/lander/fr---dolce-gusto-capsules-prefill_1754481345/assets/img-review4.jpg"> 
-        <strong>Marc T.</strong> <span class="stars">★★★★★</span>
-        <p>Rien à dire, fonctionne à merveille même par forte chaleur.</p>
+    <div class="card quad">
+      <img loading="lazy" src="https://img.icons8.com/color/96/000000/delivery.png" alt="Shipping covered" />
+      <h3>Shipping Covered</h3>
+      <p class="muted">We handle storage, packing and delivery nationwide.</p>
     </div>
-    <div class="review-item">
-        <img src="https://coffee-store.space/lander/fr---dolce-gusto-capsules-prefill_1754481345/assets/img-review1.jpg"> 
-        <strong>Isabelle P.</strong> <span class="stars">★★★★★</span>
-        <p>Service client impeccable, je recommande sans hésiter.</p>
+    <div class="card quad">
+      <svg class="icon" viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="10" y="30" width="10" height="24" rx="2" fill="currentColor" />
+        <rect x="27" y="22" width="10" height="32" rx="2" fill="currentColor" />
+        <rect x="44" y="12" width="10" height="42" rx="2" fill="currentColor" />
+        <path d="M12 14 L28 22 L40 14 L52 18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="52,18 48,8 60,10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Ads Managed by Us</h3>
+      <p class="muted">Our marketing team runs campaigns to drive traffic and sales.</p>
     </div>
-</div>
+  </div>
+</section>
 
-<!-- 社会证明浮动提示 -->
-<div class="social-proof" id="social-proof">💬 Marie (Paris) vient d'acheter ce produit !</div>
+<section class="section">
+  <div class="grid">
+    <div class="card two">
+      <h3>Customer Support Guides Your Launch</h3>
+      <img loading="lazy" src="https://placehold.co/800x450/png?text=Seller+Support" alt="Seller support image" style="width:100%;border-radius:10px;margin:10px 0"/>
+      <p class="muted">A mentor helps you pick products, set pricing and launch campaigns. Step by step support.</p>
+    </div>
+    <div class="card two">
+      <h3>Simple, Beginner-Friendly Process</h3>
+      <div class="step">
+        <img loading="lazy" src="https://img.icons8.com/fluency/48/ok.png" alt="Apply"/>
+        <div><strong>Apply</strong> — share your goals and availability.</div>
+      </div>
+      <div class="step">
+        <img loading="lazy" src="https://img.icons8.com/fluency/48/shop.png" alt="Launch"/>
+        <div><strong>Launch</strong> — we set up your store, products & ads.</div>
+      </div>
+      <div class="step">
+        <img loading="lazy" src="https://img.icons8.com/fluency/48/positive-dynamic.png" alt="Scale"/>
+        <div><strong>Scale</strong> — track profits and grow steadily.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<script>
-    // 图片轮播
-    let index = 0;
-    const images = document.querySelectorAll('.carousel img');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    let autoSlide = setInterval(showNextImage, 3000);
+<section class="section">
+  <h2 style="text-align:center;">Success Stories</h2>
+  <div class="case">
+    <div class="avatar" style="background:url('https://randomuser.me/api/portraits/men/32.jpg') center/cover;"></div>
+    <div>
+      <div class="kpi">Month 1: €10,000 sales · ~€3,000 profit</div>
+      <strong>Ming (Student, Year 4)</strong>
+      <p class="muted">Launched with no experience and quickly reached results.</p>
+    </div>
+  </div>
+  <div class="case">
+    <div class="avatar" style="background:url('https://randomuser.me/api/portraits/men/75.jpg') center/cover;"></div>
+    <div>
+      <div class="kpi">Month 3: €40,000 sales</div>
+      <strong>Darek (Restaurant Owner → E-commerce)</strong>
+      <p class="muted">Switched career, scaled online shop with our support.</p>
+    </div>
+  </div>
+  <div class="case">
+    <div class="avatar" style="background:url('https://randomuser.me/api/portraits/women/68.jpg') center/cover;"></div>
+    <div>
+      <div class="kpi">Monthly Sales: €35,000</div>
+      <strong>Katherine (Travel Industry → E-commerce)</strong>
+      <p class="muted">Pivoted and built a profitable online store in months.</p>
+    </div>
+  </div>
+</section>
 
-    function showImage(i) {
-        images[index].classList.remove('active');
-        index = (i + images.length) % images.length;
-        images[index].classList.add('active');
-    }
-    function showNextImage() { showImage(index + 1); }
-    function showPrevImage() { showImage(index - 1); }
-    nextBtn.addEventListener('click', () => { showNextImage(); resetAutoSlide(); });
-    prevBtn.addEventListener('click', () => { showPrevImage(); resetAutoSlide(); });
-    function resetAutoSlide() { clearInterval(autoSlide); autoSlide = setInterval(showNextImage, 3000); }
+<section class="section" id="apply">
+  <div class="cta-box">
+    <h2>Contact Support to Open Your Shop</h2>
+    <p>Free setup • Products supplied • Shipping & ads handled • Guided by our team</p>
+    <a class="cta-secondary" href="https://wa.me/60187703864">Chat on WhatsApp</a>
+  </div>
+</section>
 
-    // 倒计时功能
-    let countdownTime = 15 * 60; // 15分钟
-    const countdownEl = document.getElementById('countdown');
-    setInterval(() => {
-        let minutes = Math.floor(countdownTime / 60);
-        let seconds = countdownTime % 60;
-        countdownEl.textContent = `⏳ Offre se termine dans : ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-        if (countdownTime > 0) countdownTime--;
-    }, 1000);
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/60187703864" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp" />
+</a>
 
-    // 库存减少模拟
-    let stock = 91;
-    const stockEl = document.getElementById('stock');
-    setInterval(() => {
-        if (stock > 5 && Math.random() > 0.7) {
-            stock--;
-            stockEl.textContent = `⚠️ Stock limité : seulement ${stock} pièces disponibles !`;
-        }
-    }, 5000);
-
-    // 社会证明提示
-    const socialProof = document.getElementById('social-proof');
-    const buyers = ["Marie (Paris)", "Julien (Lyon)", "Sophie (Marseille)", "Paul (Toulouse)", "Isabelle (Nice)"];
-    setInterval(() => {
-        let buyer = buyers[Math.floor(Math.random() * buyers.length)];
-        socialProof.textContent = `💬 ${buyer} vient d'acheter ce produit !`;
-        socialProof.style.display = 'block';
-        setTimeout(() => { socialProof.style.display = 'none'; }, 5000);
-    }, 15000);
-</script>
+<footer>
+  © 2025 YourCompany. Results may vary. Example incomes are not guaranteed.
+</footer>
 
 </body>
 </html>
