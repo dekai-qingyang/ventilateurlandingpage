@@ -1,185 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Become a Direct Seller – Earn €100/Day Easily</title>
-<style>
-  :root{
-    --brand:#111; --accent:#27ae60; --lite:#f6f7f9; --text:#222; --muted:#666;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff;}
-  .banner{background:var(--brand);color:#fff;padding:12px 16px;text-align:center;font-weight:700}
-  .hero{
-    background:url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-    color:#fff;text-align:center;padding:80px 18px;position:relative;isolation:isolate;
-  }
-  .hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:0}
-  .hero > div{position:relative;z-index:1;max-width:980px;margin:0 auto}
-  .hero h1{margin:0 0 10px;font-size:34px;line-height:1.15}
-  .hero p{margin:0 auto 18px;max-width:780px;font-size:18px;opacity:.95}
-  .cta-primary{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
-    padding:14px 24px;border-radius:10px;font-weight:700;box-shadow:0 6px 18px rgba(39,174,96,.25)}
-  .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-  .badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:8px 12px;border-radius:999px;font-size:13px;color:#fff}
-  .section{max-width:1100px;margin:0 auto;padding:28px 16px}
-  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;align-items:start}
-  .card{grid-column:span 12;background:var(--lite);border:1px solid #eaecef;border-radius:14px;padding:18px;text-align:center}
-  .card img{width:50px;height:50px;margin-bottom:10px;object-fit:cover;border-radius:8px}
-  .icon{width:50px;height:50px;margin-bottom:10px;color:var(--accent)}
-  @media(min-width:800px){.card.quad{grid-column:span 3}.two{grid-column:span 6}}
-  .muted{color:var(--muted)}
-  .list{margin:.4rem 0 0;padding-left:18px;text-align:left}
-  .list li{margin:.2rem 0}
-  .case{display:flex;gap:14px;padding:14px;border:1px solid #eef0f3;border-radius:12px;background:#fff}
-  .avatar{width:56px;height:56px;border-radius:50%;background:#ddd;flex:0 0 56px}
-  .kpi{display:inline-block;background:#eefaf3;color:#1e824c;border:1px solid #d6f2e2;padding:4px 8px;border-radius:8px;font-weight:700;font-size:13px;margin:.3rem 0}
-  .step{display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;text-align:left}
-  .step img{width:34px;height:34px}
-  .cta-box{background:var(--brand);color:#fff;border-radius:16px;padding:22px;text-align:center}
-  .cta-secondary{display:inline-block;background:#fff;color:#000;font-weight:800;text-decoration:none;padding:12px 20px;border-radius:10px}
-  footer{padding:22px 16px;color:#777;text-align:center;font-size:13px}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Grant Support</title>
 
-  /* WhatsApp Floating Button */
-  .whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 50%;
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
     text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease;
-  }
-  .whatsapp-float:hover { transform: scale(1.1); }
-  .whatsapp-float img { width: 38px; height: 38px; }
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 26px;
+    color: #222;
+}
+
+.amount {
+    font-size: 36px;
+    color: #27ae60;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.steps {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.step {
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: #2ecc71;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #27ae60;
+}
+
+.note {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #777;
+}
 </style>
+
 </head>
+
 <body>
 
-<div class="banner">Become a Direct Seller – Earning €100 per day is easy</div>
+<div class="container">
 
-<section class="hero">
-  <div>
-    <h1>Start a profitable online shop in your spare time</h1>
-    <p>Open for free. We supply products, handle logistics and run ads. You focus on selling and get paid.</p>
-    <a class="cta-primary" href="#apply">Contact Support to Open Your Shop</a>
-    <div class="badges">
-      <span class="badge">Free to start</span><span class="badge">We provide inventory</span>
-      <span class="badge">We ship for you</span><span class="badge">We manage ads</span>
-    </div>
-  </div>
-</section>
+<h1>Want To Earn A College Degree?</h1>
 
-<section class="section">
-  <div class="grid">
-    <div class="card quad">
-      <img loading="lazy" src="https://img.icons8.com/color/96/000000/shop.png" alt="Free store setup" />
-      <h3>Free Store Setup</h3>
-      <p class="muted">Open your store with zero cost. Keep profits from day one.</p>
-    </div>
-    <div class="card quad">
-      <img loading="lazy" src="https://img.icons8.com/color/96/000000/product.png" alt="Products provided" />
-      <h3>Products Provided</h3>
-      <p class="muted">Access trending, quality-checked products ready for Italy.</p>
-    </div>
-    <div class="card quad">
-      <img loading="lazy" src="https://img.icons8.com/color/96/000000/delivery.png" alt="Shipping covered" />
-      <h3>Shipping Covered</h3>
-      <p class="muted">We handle storage, packing and delivery nationwide.</p>
-    </div>
-    <div class="card quad">
-      <svg class="icon" viewBox="0 0 64 64" aria-hidden="true">
-        <rect x="10" y="30" width="10" height="24" rx="2" fill="currentColor" />
-        <rect x="27" y="22" width="10" height="32" rx="2" fill="currentColor" />
-        <rect x="44" y="12" width="10" height="42" rx="2" fill="currentColor" />
-        <path d="M12 14 L28 22 L40 14 L52 18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <polyline points="52,18 48,8 60,10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <h3>Ads Managed by Us</h3>
-      <p class="muted">Our marketing team runs campaigns to drive traffic and sales.</p>
-    </div>
-  </div>
-</section>
+<p>YOU MAY QUALIFY FOR UP TO:</p>
 
-<section class="section">
-  <div class="grid">
-    <div class="card two">
-      <h3>Customer Support Guides Your Launch</h3>
-      <img loading="lazy" src="https://placehold.co/800x450/png?text=Seller+Support" alt="Seller support image" style="width:100%;border-radius:10px;margin:10px 0"/>
-      <p class="muted">A mentor helps you pick products, set pricing and launch campaigns. Step by step support.</p>
-    </div>
-    <div class="card two">
-      <h3>Simple, Beginner-Friendly Process</h3>
-      <div class="step">
-        <img loading="lazy" src="https://img.icons8.com/fluency/48/ok.png" alt="Apply"/>
-        <div><strong>Apply</strong> — share your goals and availability.</div>
-      </div>
-      <div class="step">
-        <img loading="lazy" src="https://img.icons8.com/fluency/48/shop.png" alt="Launch"/>
-        <div><strong>Launch</strong> — we set up your store, products & ads.</div>
-      </div>
-      <div class="step">
-        <img loading="lazy" src="https://img.icons8.com/fluency/48/positive-dynamic.png" alt="Scale"/>
-        <div><strong>Scale</strong> — track profits and grow steadily.</div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="amount">$7,395*</div>
 
-<section class="section">
-  <h2 style="text-align:center;">Success Stories</h2>
-  <div class="case">
-    <div class="avatar" style="background:url('https://randomuser.me/api/portraits/men/32.jpg') center/cover;"></div>
-    <div>
-      <div class="kpi">Month 1: €10,000 sales · ~€3,000 profit</div>
-      <strong>Ming (Student, Year 4)</strong>
-      <p class="muted">Launched with no experience and quickly reached results.</p>
-    </div>
-  </div>
-  <div class="case">
-    <div class="avatar" style="background:url('https://randomuser.me/api/portraits/men/75.jpg') center/cover;"></div>
-    <div>
-      <div class="kpi">Month 3: €40,000 sales</div>
-      <strong>Darek (Restaurant Owner → E-commerce)</strong>
-      <p class="muted">Switched career, scaled online shop with our support.</p>
-    </div>
-  </div>
-  <div class="case">
-    <div class="avatar" style="background:url('https://randomuser.me/api/portraits/women/68.jpg') center/cover;"></div>
-    <div>
-      <div class="kpi">Monthly Sales: €35,000</div>
-      <strong>Katherine (Travel Industry → E-commerce)</strong>
-      <p class="muted">Pivoted and built a profitable online store in months.</p>
-    </div>
-  </div>
-</section>
+<p><b>IN COLLEGE GRANT SUPPORT</b></p>
 
-<section class="section" id="apply">
-  <div class="cta-box">
-    <h2>Contact Support to Open Your Shop</h2>
-    <p>Free setup • Products supplied • Shipping & ads handled • Guided by our team</p>
-    <a class="cta-secondary" href="https://wa.me/60187703864">Chat on WhatsApp</a>
-  </div>
-</section>
+<div class="steps">
+<div class="step">Step 1 - Select A Subject</div>
+<div class="step">Step 2 - Answer 10 Simple Questions</div>
+<div class="step">Step 3 - Find Out If You Qualify</div>
+</div>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/60187703864" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-  <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp" />
-</a>
+<button class="btn" onclick="goOffer()">CONTINUE</button>
 
-<footer>
-  © 2025 YourCompany. Results may vary. Example incomes are not guaranteed.
-</footer>
+<div class="note">
+It's FREE and takes less than 2 minutes!
+</div>
+
+</div>
+
+<script>
+function goOffer(){
+    window.location.href = "https://whlg-load.com/?a=169546&c=428224&co=219482&mt=16";
+}
+</script>
 
 </body>
 </html>
