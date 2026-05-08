@@ -3,104 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>College Grant Support</title>
+<title>MacBook For Sale</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f9;
-    margin: 0;
-    text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-.container {
-    max-width: 500px;
-    margin: 40px auto;
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#f8f9fa,#e9ecef);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
 }
 
-h1 {
-    font-size: 26px;
-    color: #222;
+.container{
+    width:100%;
+    max-width:520px;
+    background:#fff;
+    border-radius:24px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    padding:45px 30px;
+    text-align:center;
 }
 
-.amount {
-    font-size: 36px;
-    color: #27ae60;
-    font-weight: bold;
-    margin: 10px 0;
+.icon{
+    width:90px;
+    height:90px;
+    margin:0 auto 25px;
+    background:#111;
+    border-radius:22px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:42px;
 }
 
-.steps {
-    text-align: left;
-    margin: 20px 0;
-    font-size: 16px;
+h1{
+    font-size:38px;
+    color:#111;
+    margin-bottom:10px;
 }
 
-.step {
-    margin-bottom: 10px;
+.sub{
+    color:#777;
+    font-size:16px;
+    margin-bottom:32px;
 }
 
-.btn {
-    display: block;
-    width: 100%;
-    padding: 14px;
-    background: #2ecc71;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
+.question{
+    font-size:28px;
+    color:#111;
+    line-height:1.4;
+    margin-bottom:28px;
 }
 
-.btn:hover {
-    background: #27ae60;
+.buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
 }
 
-.note {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #777;
+button{
+    width:145px;
+    height:56px;
+    border:none;
+    border-radius:14px;
+    font-size:22px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+.yes{
+    background:#111;
+    color:#fff;
+}
+
+.no{
+    background:#f1f1f1;
+    color:#111;
+}
+
+.hidden{
+    display:none;
+}
+
+.whatsapp-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    width:100%;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    padding:18px 20px;
+    border-radius:14px;
+    font-size:20px;
+    font-weight:700;
+    line-height:1.4;
+    transition:0.25s;
+}
+
+.whatsapp-btn:hover{
+    transform:translateY(-2px);
+}
+
+.whatsapp-btn i{
+    font-size:30px;
+}
+
+.small{
+    margin-top:14px;
+    color:#888;
+    font-size:14px;
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>Want To Earn A College Degree?</h1>
-
-<p>YOU MAY QUALIFY FOR UP TO:</p>
-
-<div class="amount">$7,395*</div>
-
-<p><b>IN COLLEGE GRANT SUPPORT</b></p>
-
-<div class="steps">
-<div class="step">Step 1 - Select A Subject</div>
-<div class="step">Step 2 - Answer 10 Simple Questions</div>
-<div class="step">Step 3 - Find Out If You Qualify</div>
+<div class="icon">
+<i class="fas fa-laptop"></i>
 </div>
 
-<button class="btn" onclick="goOffer()">CONTINUE</button>
+<h1>MacBook For Sale</h1>
+<div class="sub">Excellent Condition • Ready To Use</div>
 
-<div class="note">
-It's FREE and takes less than 2 minutes!
+<!-- Question -->
+<div id="step1">
+    <div class="question">
+        Are you interested in buying my MacBook?
+    </div>
+
+    <div class="buttons">
+        <button class="yes" onclick="showWhatsapp()">Yes</button>
+        <button class="no" onclick="showWhatsapp()">No</button>
+    </div>
+</div>
+
+<!-- WhatsApp -->
+<div id="step2" class="hidden">
+    <a class="whatsapp-btn" href="https://wa.me/447394413605" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        Click to add my WhatsApp,<br>I’ll send you pictures
+    </a>
+
+    <div class="small">Quick reply available</div>
 </div>
 
 </div>
 
 <script>
-function goOffer(){
-    window.location.href = "https://whlg-load.com/?a=169546&c=428224&co=219482&mt=16";
+function showWhatsapp(){
+    document.getElementById("step1").classList.add("hidden");
+    document.getElementById("step2").classList.remove("hidden");
 }
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
